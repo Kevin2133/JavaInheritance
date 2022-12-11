@@ -6,13 +6,9 @@ public class Equilatero extends Triangolo {
         super(lato, lato, lato);
     }
 
-    public void visualizza (){
-        super.visualizza();
-    }
-
-    public void calcolaAltezza (){
-        this.altezza = Math.sqrt((double) (Math.pow(this.lato1, 2) - 
-        Math.pow((double) this.lato1 / 2, 2)));
+    public double calcolaAltezza (){
+        this.altezza =  Math.sqrt((double) 3 / 4) * this.lato1;
+        return this.altezza;
     }
 
     public double area(){

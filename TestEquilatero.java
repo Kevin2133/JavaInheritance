@@ -1,10 +1,23 @@
 import java.util.Scanner;
 
+/*
+ * 
+ * menù TestEquilatero:
+                System.out.println("premi 0 per uscire");
+                System.out.println("premi 1 per creare un triangolo");
+                System.out.println("premi 2 per visualizzare i lati");
+                System.out.println("premi 3 per dire se e' un triangolo");
+                System.out.println("premi 4 per calcolare l'altezza");
+                System.out.println("premi 5 per calcolare il perimetro");
+                System.out.println("premi 6 per calcolare l'area");
+ */
+
 public class TestEquilatero {
     
     public static void main (String arg[]){
-        int scelta, lato;
-        Equilatero t;
+        int scelta, lato, perimetro;
+        double altezza, area;
+        Equilatero t = null;
         Scanner scanner = new Scanner(System.in);
         boolean c1f = false;
 
@@ -39,10 +52,47 @@ public class TestEquilatero {
                 case 2:
                     if(c1f){
                         t.visualizza();
+                    }else{
+                        System.out.println("Prima creare un triangolo");
                     }
                     break;
                 case 3:
-
+                    if(c1f){
+                        if(t.isTri()){
+                            System.out.println("Si tratta di un triangolo");
+                        }else{
+                            System.out.println("Non e' un triangolo");
+                        }
+                    }else{
+                        System.out.println("Prima creare un triangolo");
+                    }
+                    break;
+                case 4:
+                    if(c1f){
+                        altezza = t.calcolaAltezza();
+                        System.out.println("Altezza = " + altezza);
+                    }else{
+                        System.out.println("Prima creare un triangolo");
+                    }
+                    break;
+                case 5:
+                    if(c1f){
+                        perimetro = t.perimetro();
+                        System.out.println("Perimetro = " + perimetro);
+                    }else{
+                        System.out.println("Prima creare un triangolo");
+                    }
+                    break;
+                case 6:
+                    if(c1f){
+                        area = t.area();
+                        System.out.println("Area = " + area);
+                    }else{
+                        System.out.println("Prima creare un triangolo");
+                    }
+                    break;
+                default:
+                    System.out.println("Scelta non prevista");
                     break;
             }
         }while(scelta != 0);
