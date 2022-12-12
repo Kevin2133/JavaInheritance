@@ -1,11 +1,13 @@
 public class Triangolo {
 
-    public int lato1, lato2, lato3;
+    int lato1, lato2, lato3;
+    double altezza;
 
     public Triangolo (int lato1, int lato2, int lato3){
         this.lato1 = lato1;
         this.lato2 = lato2;
         this.lato3 = lato3;
+        this.altezza = -1;
     }
 
     public void visualizza(){
@@ -23,7 +25,30 @@ public class Triangolo {
         return false;
     }
 
-    public int perimetro(){
+    public boolean isEquilatero(){
+        if((this.lato1 == this.lato2) && (this.lato2 == this.lato3)){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isIsoscele(){
+        if((this.lato1 == this.lato2) || (this.lato2 == this.lato3) || (this.lato1 == this.lato3)){
+            return true;
+        }
+
+        return false;
+    }
+
+    public int calcolaPerimetro(){
         return this.lato1 + this.lato2 + this.lato3;
+    }
+
+    public double calcolaArea(){
+        if(this.altezza > -1){
+            return this.lato1 * this.altezza / 2;
+        }
+
+        return -1;
     }
 }

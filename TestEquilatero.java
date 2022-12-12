@@ -77,7 +77,7 @@ public class TestEquilatero {
                     break;
                 case 5:
                     if(c1f){
-                        perimetro = t.perimetro();
+                        perimetro = t.calcolaPerimetro();
                         System.out.println("Perimetro = " + perimetro);
                     }else{
                         System.out.println("Prima creare un triangolo");
@@ -85,7 +85,7 @@ public class TestEquilatero {
                     break;
                 case 6:
                     if(c1f){
-                        area = t.area();
+                        area = t.calcolaArea();
                         System.out.println("Area = " + area);
                     }else{
                         System.out.println("Prima creare un triangolo");
