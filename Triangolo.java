@@ -51,4 +51,16 @@ public class Triangolo {
 
         return -1;
     }
+
+    /*public int getLato1 (){
+        return this.lato1;
+    }
+    
+    public int getLato2 (){
+        return this.lato2;
+    }
+
+    public int getLato3 (){
+        return this.lato3;
+    }*/
 }
