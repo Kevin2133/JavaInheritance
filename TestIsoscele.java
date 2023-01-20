@@ -13,6 +13,7 @@ public class TestIsoscele {
 
     public static void main (String arg[]){
         int scelta, ob, base;
+        double altezza;
         Scanner scanner = new Scanner(System.in);
         
         do{

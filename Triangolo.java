@@ -32,35 +32,18 @@ public class Triangolo {
         return false;
     }
 
-    public boolean isIsoscele(){
+    /*public boolean isIsoscele(){
         if((this.lato1 == this.lato2) || (this.lato2 == this.lato3) || (this.lato1 == this.lato3)){
             return true;
         }
 
         return false;
-    }
+    }*/
 
     public int calcolaPerimetro(){
         return this.lato1 + this.lato2 + this.lato3;
     }
 
-    public double calcolaArea(){
-        if(this.altezza > -1){
-            return this.lato1 * this.altezza / 2;
-        }
-
-        return -1;
-    }
-
-    /*public int getLato1 (){
-        return this.lato1;
-    }
     
-    public int getLato2 (){
-        return this.lato2;
-    }
 
-    public int getLato3 (){
-        return this.lato3;
-    }*/
 }
