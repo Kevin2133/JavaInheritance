@@ -1,3 +1,4 @@
+
 public class Isoscele extends Triangolo{
     /* metodo se è isoscele, metodo che calcola la base e il lato obliquo, metodo che calcola l'area */
 
@@ -8,6 +9,11 @@ public class Isoscele extends Triangolo{
         this.altezza = altezza;
         this.base = -1;
         this.obliquo = -1;
+    }
+
+    public void visualizza (){
+        super.visualizza();
+        System.out.println("Altezza = " + this.altezza);
     }
 
     public void calcolaBase (){
@@ -27,9 +33,16 @@ public class Isoscele extends Triangolo{
                 this.base = lato2;
                 this.obliquo = lato3;
             }
-        }             
+        }  
         
-    } 
+        if((this.base > 0) && (this.obliquo > 0)){
+            System.out.println("Lato obliquo = " + this.obliquo);
+            System.out.println("Base = " + this.base);
+        }else{
+            System.out.println("I dati inseriti non si riferiscono a un triangolo iscoscele. Non e' quindi possibile determinare base e lato obliquo");
+        }
+        
+    }     
 
     public boolean isIsoscele (){
         if((this.lato1 == this.lato2) || (this.lato2 == this.lato3) || (this.lato1 == this.lato3)){
